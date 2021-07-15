@@ -54,8 +54,11 @@ function showNotes() {
 
     });
     let userNotes = document.getElementById('userNotes');
-    localStorage.setItem("storage", JSON.stringify(noteObj));
     
+    if(!storage){
+        localStorage.setItem("storage", JSON.stringify(noteObj));
+    }
+
     if (storage.length == 0) {
         userNotes.innerHTML = html;
     }
