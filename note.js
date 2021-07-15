@@ -54,6 +54,9 @@ function showNotes() {
 
     });
     let userNotes = document.getElementById('userNotes');
+    if (storage.length = 0) {
+        html = 'You can see or delete your notes here';
+    }
     if (storage.length != 0) {
         userNotes.innerHTML = html;
     }
