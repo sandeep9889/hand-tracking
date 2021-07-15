@@ -27,6 +27,7 @@ addBtn.addEventListener('click', () => {
 function showNotes() {
     let storage = localStorage.getItem('storage');
    
+    
     if (storage == null) {
         // titleObj = [];
         noteObj = [];
@@ -35,7 +36,7 @@ function showNotes() {
         // titleObj = JSON.parse(noteTitle);
         noteObj = JSON.parse(storage);
     }
-
+    localStorage.setItem("storage", JSON.stringify(noteObj));
     html = `<h5 class="my-2">You can see or delete your notes here</h5>`
     
     noteObj.forEach(function(element, index){
