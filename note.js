@@ -36,7 +36,7 @@ function showNotes() {
         noteObj = JSON.parse(storage);
     }
 
-    html = ``
+    html = `<h5 class="my-2">You can see or delete your notes here</h5>`
     
     noteObj.forEach(function(element, index){
 
@@ -54,8 +54,8 @@ function showNotes() {
 
     });
     let userNotes = document.getElementById('userNotes');
-    if (storage.length = 0) {
-        html = 'You can see or delete your notes here';
+    if (storage.length == 0) {
+        userNotes.innerHTML = html;
     }
     if (storage.length != 0) {
         userNotes.innerHTML = html;
