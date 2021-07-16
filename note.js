@@ -18,7 +18,7 @@ addBtn.addEventListener('click', () => {
     else {
         noteCont = JSON.parse(storage);
     }
-    if (note.value!='' || noteTitle.value!=''){
+    if (note.value!='' && noteTitle.value!=''){
     noteCont.titleArr.push(noteTitle.value);
     noteCont.noteArr.push(note.value);
     localStorage.setItem("storage", JSON.stringify(noteCont));
